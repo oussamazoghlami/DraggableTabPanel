@@ -36,15 +36,6 @@ public class DraggableTabPanel extends TabLayoutPanel {
 		addDragHandler();
 	}
 
-	// @Override
-	// public void add(Widget child, Widget header) {
-	// AbsolutePanel headerPanel = new AbsolutePanel();
-	// headerPanel.add(header);
-	// super.add(child, headerPanel);
-	// dragController.makeDraggable(header);
-	// this.refreshDropControllers();
-	// }
-
 	@Override
 	public boolean remove(int index) {
 		boolean result = super.remove(index);

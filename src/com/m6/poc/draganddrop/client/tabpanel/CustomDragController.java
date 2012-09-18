@@ -11,35 +11,35 @@ import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 
 /**
+ * Class allowing to display the widget text, if it implements the {@link HasText} interface, when dragged
  * 
  * @author ozoghlami
- *
+ * 
  */
-public class CustomDragController  extends PickupDragController {
+public class CustomDragController extends PickupDragController {
 
 	public CustomDragController(AbsolutePanel boundaryPanel, boolean allowDroppingOnBoundaryPanel) {
 		super(boundaryPanel, allowDroppingOnBoundaryPanel);
 	}
-	
+
 	@Override
 	protected Widget newDragProxy(DragContext context) {
 		AbsolutePanel container = new AbsolutePanel();
-	    container.getElement().getStyle().setProperty("overflow", "visible");
+		container.getElement().getStyle().setProperty("overflow", "visible");
 
-	    WidgetArea draggableArea = new WidgetArea(context.draggable, null);
-	    for (Widget widget : context.selectedWidgets) {
-	      WidgetArea widgetArea = new WidgetArea(widget, null);
-	      SimplePanel proxy = new SimplePanel();
-	      if (widget instanceof HasText) {
-	    	  proxy.add(new Label(((HasText) widget).getText()));
-	      }
-	      proxy.setPixelSize(widget.getOffsetWidth(), widget.getOffsetHeight());
-	      proxy.addStyleName(DragClientBundle.INSTANCE.css().proxy());
-	      container.add(proxy, widgetArea.getLeft() - draggableArea.getLeft(), widgetArea.getTop()
-	          - draggableArea.getTop());
-	    }
+		WidgetArea draggableArea = new WidgetArea(context.draggable, null);
+		for (Widget widget : context.selectedWidgets) {
+			WidgetArea widgetArea = new WidgetArea(widget, null);
+			SimplePanel proxy = new SimplePanel();
+			if (widget instanceof HasText) {
+				proxy.add(new Label(((HasText) widget).getText()));
+			}
+			proxy.setPixelSize(widget.getOffsetWidth(), widget.getOffsetHeight());
+			proxy.addStyleName(DragClientBundle.INSTANCE.css().proxy());
+			container.add(proxy, widgetArea.getLeft() - draggableArea.getLeft(), widgetArea.getTop() - draggableArea.getTop());
+		}
 
-	    return container;
+		return container;
 	}
 
 }
