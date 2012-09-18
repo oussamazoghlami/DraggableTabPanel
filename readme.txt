@@ -1,1 +1,1 @@
-Implementation du widget GWT TABPANEL, contenant des onglets draggable.
+Custom implementation of the GWT widget TabPanel, containing draggable tabulations.
