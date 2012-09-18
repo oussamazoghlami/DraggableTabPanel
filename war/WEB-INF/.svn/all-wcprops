@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/27453/Sherpa/trunk/DragAndDrop/war/WEB-INF
+END
+logging.properties
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/27453/Sherpa/trunk/DragAndDrop/war/WEB-INF/logging.properties
+END
+appengine-web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/27453/Sherpa/trunk/DragAndDrop/war/WEB-INF/appengine-web.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/27453/Sherpa/trunk/DragAndDrop/war/WEB-INF/web.xml
+END
