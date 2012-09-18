@@ -16,6 +16,8 @@ import com.m6.poc.draganddrop.client.tabpanel.DraggableTabPanel;
  * POC Entry Point allowing to test the DraggableTabPanel Widget
  * 
  * @author Oussama ZOGHLAMI
+ *
+ *
  */
 @SuppressWarnings("deprecation")
 public class DragAndDrop implements EntryPoint {
