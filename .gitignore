@@ -1,0 +1,8 @@
+.svn
+.settings
+.gwt
+.project
+.classpath
+war
+test-classes
+gwt-unitCache
